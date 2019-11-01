@@ -5,9 +5,13 @@
 ## Global
 ```bash
 :help keyword # open help for keyword
-:o file       # open file
-:saveas file  # save file as
-:close        # close current pane
+:e file       # open file
+:w            # write (current buffer to disk)
+:w file       # write file   (continue to edit with OLD name)
+:saveas file  # save file as (continue to edit with NEW name)
+:q            # quit vim
+:q!           # quit without saving
+.             # repeat last command (VERY POWERFUL)
 ```
 
 ## Cursor movement
@@ -67,8 +71,6 @@ c0       # change (replace) to the start of the line
 c$       # change (replace) to the end of the line
 s        # delete character and substitute text
 S        # delete line and substitute text (same as cc)
-xp       # transpose two letters (delete and paste)
-.        # repeat last command
 u        # undo
 Ctrl + r # redo
 ```
@@ -113,6 +115,7 @@ d$       # delete (cut) to the end of the line
 d^       # delete (cut) to the first non-blank character of the line
 d0       # delete (cut) to the begining of the line
 x        # delete (cut) character
+xp       # transpose two letters (delete and paste)
 ```
 
 ## Search and replace
